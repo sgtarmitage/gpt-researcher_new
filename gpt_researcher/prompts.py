@@ -55,7 +55,7 @@ def generate_report_prompt(
     context,
     report_source: str,
     report_format="apa",
-    total_words=1000,
+    total_words=2000,
     tone=None,
     language="english",
 ):
@@ -141,7 +141,7 @@ The response MUST not contain any markdown format or additional text (like ```js
 
 
 def generate_resource_report_prompt(
-    question, context, report_source: str, report_format="apa", tone=None, total_words=1000, language=None
+    question, context, report_source: str, report_format="apa", tone=None, total_words=2000, language=None
 ):
     """Generates the resource report prompt for the given question and research summary.
 
@@ -179,13 +179,13 @@ def generate_resource_report_prompt(
 
 
 def generate_custom_report_prompt(
-    query_prompt, context, report_source: str, report_format="apa", tone=None, total_words=1000, language: str = "english"
+    query_prompt, context, report_source: str, report_format="apa", tone=None, total_words=2000, language: str = "english"
 ):
     return f'"{context}"\n\n{query_prompt}'
 
 
 def generate_outline_report_prompt(
-    question, context, report_source: str, report_format="apa", tone=None,  total_words=1000, language: str = "english"
+        question, context, report_source: str, report_format="apa", tone=None, total_words=2000, language: str = "english"
 ):
     """Generates the outline report prompt for the given question and research summary.
     Args: question (str): The question to generate the outline report prompt for
@@ -291,7 +291,7 @@ def generate_subtopic_report_prompt(
     context,
     report_format: str = "apa",
     max_subsections=5,
-    total_words=800,
+    total_words=1600,
     tone: Tone = Tone.Objective,
     language: str = "english",
 ) -> str:
